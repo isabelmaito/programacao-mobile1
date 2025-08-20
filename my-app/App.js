@@ -40,6 +40,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#ffffffff',
     fontWeight: 700,
+    textShadowColor: '#000000ff',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1
 
   },
 
@@ -47,7 +50,6 @@ const styles = StyleSheet.create({
     fontSize: 8,
     color: '#000000ff',
     fontWeight: 700,
-
   },
 
 });
