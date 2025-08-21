@@ -1,20 +1,48 @@
 import React, { Component } from "react"
-import { View, Text } from "react-native"
+import { View, Text, TextInput, StyleSheet } from "react-native"
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            nome: 'Delbicos'
+        };
+    }
+
   render() {
     return (
-      <View style={{flex:1, backgroundColor: '#222'}}>
+      <View style={styles.container}>
 
-        <View style={{flex:1, backgroundColor: '#FC8200'}}></View>
+        <TextInput style={styles.input}/>
 
-        <View style={{flex:1, backgroundColor: '#005A93'}}></View>
+        <Text style={styles.texto}> Delbicos!! </Text>
 
-        <View style={{flex:2, backgroundColor: '#ffff'}}></View>
-        
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent: 'space-around'
+    },
+
+    input:{
+        height: 45,
+        borderWidth: 1,
+        borderColor: '#0000',
+        margin: 10,
+        fontSize: 20,
+        padding: 10,
+        backgroundColor: '#aaa'
+    },
+
+    texto:{
+        textAlign: 'center',
+        fontSize: 25
+    }
+})
+
 export default App;
 
