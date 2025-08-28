@@ -7,15 +7,31 @@ class App extends Component {
         this.state = {
             nome: 'Delbicos'
         };
+
+        this.pegaNome = this.pegaNome.bind(this);
+    }
+
+    pegaNome(texto){
+      if(texto.lenght > 0 ){
+        this.setState({nome: 'Bem Vindo' + texto});
+      }else{
+        this.setState({nome: ''});
+      }
     }
 
   render() {
     return (
       <View style={styles.container}>
 
-        <TextInput style={styles.input}/>
-
-        <Text style={styles.texto}> Delbicos!! </Text>
+        <TextInput 
+        style={styles.input}
+        placeholder="Digite seu nome"
+        underlineColorAndroid="transparent"
+        onChangeText={ (texto) => this.setState({input: texto})}
+        />
+        <Button title="Entrar" onPress={this.entrar}/>
+        
+        <Text style={styles.texto}>{this.state.nome}</Text>
 
       </View>
     );
