@@ -22,3 +22,4 @@ textoNegrito: {
 fontFamily: "Arial",
 fontWeight: "normal",
 },
+});
