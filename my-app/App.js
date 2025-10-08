@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Button } from "react-native";
 import { View, Text, TextInput, StyleSheet } from "react-native"
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
     }
 
     pegaNome(texto){
-      if(texto.lenght > 0 ){
+      if(texto.length > 0 ){
         this.setState({nome: 'Bem Vindo' + texto});
       }else{
         this.setState({nome: ''});
