@@ -1,31 +1,31 @@
-import React from 'react'; //
-import { View, Button, StyleSheet } from 'react-native'; //
+import React from 'react'; 
+import { View, Button, StyleSheet } from 'react-native'; 
 
-const HomeScreen = ({ navigation }) => { //
+const HomeScreen = ({ navigation }) => { 
   return (
-    <View style={styles.container}> //
-      <Button //
-        title="Ir para Cadastro" //
-        onPress={() => navigation.navigate('Cadastro')} //
-        color="#6200ee" //
+    <View style={styles.container}> 
+      <Button 
+        title="Ir para Cadastro" 
+        onPress={() => navigation.navigate('Cadastro')} 
+        color="#6200ee" 
       />
       {/* Separador visual opcional (ajustado para usar estilo) */}
       <View style={styles.buttonSeparator} /> 
-      <Button //
-        title="Ir para Consulta" //
-        onPress={() => navigation.navigate('Consulta')} //
-        color="#03dac6" //
+      <Button 
+        title="Ir para Consulta" 
+        onPress={() => navigation.navigate('Consulta')} 
+        color="#03dac6" 
       />
     </View>
-  ); //
+  ); 
 };
 
-const styles = StyleSheet.create({ //
-  container: { //
-    flex: 1, //
-    justifyContent: 'center', //
-    alignItems: 'center', //
-    backgroundColor: '#ffffff', //
+const styles = StyleSheet.create({ 
+  container: { 
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    backgroundColor: '#ffffff', 
   },
   // Adicionado para separar melhor os botões
   buttonSeparator: { 
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({ //
   },
 });
 
-export default HomeScreen; //
+export default HomeScreen; 
