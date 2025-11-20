@@ -1,17 +1,8 @@
-const express = require('express'); //
-const bodyParser = require('body-parser'); //
-const userRoutes = require('./ROTAS/userRoutes'); //
+import { registerRootComponent } from 'expo';
 
-const app = express();
-const PORT = 3000; //
+import App from './App';
 
-// Middleware
-app.use(bodyParser.json()); //
-
-// Rotas
-app.use('/api', userRoutes); //
-
-// Iniciar o servidor
-app.listen(PORT, () => { //
-    console.log(`Servidor rodando na porta ${PORT}`); //
-});
+// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
+// It also ensures that whether you load the app in Expo Go or in a native build,
+// the environment is set up appropriately
+registerRootComponent(App);
