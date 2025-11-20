@@ -9,8 +9,7 @@ const CadastroScreen = () => {
 
   const handleCadastro = async () => { 
     try {
-      // ATENÇÃO: Substitua '192.168.0.92' pelo IP da sua máquina que executa a API
-      const API_URL = 'http://200.162.254.126/api/cadastro'; 
+      const API_URL = `${API_BASE}/cadastro`; 
 
       const response = await axios.post(API_URL, 
         { nome, email, senha }); 
