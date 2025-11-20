@@ -7,8 +7,7 @@ const ConsultaScreen = () => {
 
   const handleConsulta = async () => { 
     try {
-      // ATENÇÃO: Substitua '192.168.0.92' pelo IP da sua máquina que executa a API
-      const API_URL = 'http://200.162.254.126/api/consulta'; 
+      const API_URL = `${API_BASE}/consulta`; 
 
       const response = await axios.get(API_URL); 
       setDados(response.data); 
