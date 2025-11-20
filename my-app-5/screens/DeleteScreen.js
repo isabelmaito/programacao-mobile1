@@ -12,7 +12,7 @@ const DeleteScreen = () => {
         }
 
         try {
-            const response = await axios.delete(`http://200.162.254.126/api/deletar/${id}`);
+            const response = await axios.delete(`${API_BASE}/deletar/${id}`);
             Alert.alert('Sucesso', response.data.message);
             setId('');
         } catch (error) {
