@@ -37,7 +37,7 @@ router.get('/consulta', (req, res) => {
 });
 
 //Rota para atualização de usuário: PUT /api/atualizar/:id
-router.put('/atualizacao/:id', (req, res) => { 
+router.put('/atualizacao/:id'), (req, res) => { 
     const { id } = req.params; 
     const { nome, email, senha } = req.body;
 
@@ -60,6 +60,7 @@ router.put('/atualizacao/:id', (req, res) => {
         message: 'Usuário atualizado com sucesso!', 
         user: users[userIndex] 
     });
+};
 
     //Rota para deletar usuário: DELETE /api/deletar/:id
     router.delete('/deletar/:id', (req, res) => {
