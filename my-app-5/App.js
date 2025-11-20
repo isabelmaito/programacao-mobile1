@@ -1,13 +1,14 @@
 import React from 'react'; //
 import { NavigationContainer } from '@react-navigation/native'; //
 import { createNativeStackNavigator } from '@react-navigation/native-stack'; //
-import AtualizaScreen from './screens/AtualizaScreen';
+import AtualizacaoScreen from './screens/AtualizacaoScreen';
 import DeleteScreen from './screens/DeleteScreen';
 import CadastroScreen from './screens/CadastroScreen';
 import ConsultaScreen from './screens/ConsultaScreen';
 import HomeScreen from './screens/HomeScreen'; //Import da nova tela
 
 const Stack = createNativeStackNavigator(); 
+console.log("TESTE")
 const App = () => {
   return (
     <NavigationContainer> 
@@ -27,7 +28,7 @@ const App = () => {
         /> 
         <Stack.Screen
           name="Alteração"
-          component={AtualizaScreen}
+          component={AtualizacaoScreen}
         />
         <Stack.Screen
           name="Apagar"
